@@ -1,0 +1,658 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('Anton-Regular.ttf') format('ttf'),
+}
+body,nav {
+  font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,a {
+  font-family: 'Anton', sans-serif;
+}
+.nav{
+  width: 100vw !important;
+  font-family: 'Anton', sans-serif !important;
+}
+       
+.logo {
+    width: 200px; /* Adjust the width to the desired size */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  .min-h-screen-custom {
+    min-height: 100vh !important;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: auto;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+.mnav{
+  z-index: 999 !important;
+
+}
+.mysvg{
+  fill: white;
+}
+
+/*CTA*/
+.cssbuttons-io-button {
+  color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #FF0000;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 15em;
+  border: 2px solid #FF0000;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: #ffffff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 15em;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: rgb(255, 0, 0);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* Set the section size to 50vh and fit the width */
+.slideshow-container {
+  height: 50vh;
+  width: 100%;
+}
+
+/*card*/
+.card {
+  width: 10vw; /* Set the width to 30% of the viewport width on desktop */
+  max-width: 70vw; /* Set the maximum width to 70% of the viewport width on mobile */
+  border: 4px solid red; /* Red color solid border */
+  margin: 0 auto; /* Center the card horizontally */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 10vw; /* Maintain a square aspect ratio */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .card {
+      width: 70vw; 
+      height: 50vw;
+}
+}
+
+/*Wave*/
+.wave-menu {
+  border: 4px solid #ff0000;
+  border-radius: 50px;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: ease 0.2s;
+  position: relative;
+  background: #fff;
+}
+
+.wave-menu li {
+  list-style: none;
+  height: 40px;
+  width: 4px;
+  border-radius: 10px;
+  background: #ff0000;
+  margin: 0 6px;
+  padding: 0;
+  animation-name: wave1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease 0.2s;
+}
+
+.wave-menu:hover > li {
+  background: #fff;
+}
+
+.wave-menu:hover {
+  background: #ff0000;
+}
+
+.wave-menu li:nth-child(2) {
+  animation-name: wave2;
+  animation-delay: 0.2s;
+}
+
+.wave-menu li:nth-child(3) {
+  animation-name: wave3;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+}
+
+.wave-menu li:nth-child(4) {
+  animation-name: wave4;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.wave-menu li:nth-child(6) {
+  animation-name: wave2;
+  animation-duration: 0.5s;
+}
+
+.wave-menu li:nth-child(8) {
+  animation-name: wave4;
+  animation-delay: 0.4s;
+  animation-duration: 0.25s;
+}
+
+.wave-menu li:nth-child(9) {
+  animation-name: wave3;
+  animation-delay: 0.15s;
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.6);
+  }
+
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes wave4 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+.red-line {
+  border: none;
+  border-top: 2px solid red;
+  margin: 20px 0; /* Adjust the margin to control the space between sections */
+}
+
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  opacity: 1; /* Initially visible */
+  z-index: 9999; /* Ensure it's on top of other content */
+  animation: fadeIn 0s forwards, slideUp1 1s forwards 2s; /* Fade in and then fade out */
+}
+.logo {
+  max-width: 100%;
+  height: auto;
+  animation: fadeIn 1s;
+}
+
+.content {
+  /* Adjust styles for your content */
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideUp1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+#home {
+  /* Set initial state to be invisible */
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+/*Scroll animation*/
+.fade-in-item {
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+.btn {
+  background-color: hite;
+  border: 2.5px solid #ff0000;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 40px;
+  padding: 6px 16px; /* x-4 and y-6 equivalent values */
+  cursor: pointer; /* Optional: Add a pointer cursor on hover */
+}
+.btn:hover {
+  color: #ff0000;
+  background-color: #ffffff;
+  scale: 1.05;
+}
+
+/*Sliding img container*/
+.image-container {
+  width: fit-content;
+  cursor: pointer;
+}
+.image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+.first_button {
+  animation: shake 2.32s cubic-bezier(.36, .07, .19, .97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  25%, 75% {
+    transform: translate3d(0, 0, 0);
+  }
+  30%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  35%, 65% {
+    transform: translate3d(2px, 0, 0);
+  }
+  40%, 50%, 60% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  45%, 55% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+/*Waiting Animation*/
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  /* Add these styles to center the .wrapper within its container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ff0000;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+/*Language toggle btn*/
+.hiddenl {
+  display: none;
+}
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  width: 0px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.button-cover {
+  height: 50px;
+  margin: 0px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px -8px #c5d6d6;
+  border-radius: 4px;
+}
+
+.button-cover:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #fcebeb;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+#button-3 .knobs:before {
+  content: "En";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 0;
+  padding: 11px 2px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+#button-3 .checkbox:active + .knobs:before {
+  width: 46px;
+  border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active + .knobs:before {
+  margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs:before {
+  content: "සිං";
+  left: 42px;
+  background-color: #ff0000;
+}
+
+#button-3 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}
+#productContainer:hover .bg-white:not(:hover) {
+  filter: blur(10px); /* Adjust the blur strength as needed */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  transform: scale(0.90); /* Adjust the scale factor as needed */
+}
+#productContainer .bg-white:hover {
+  filter: none; /* Remove blur effect on the card being hovered */
+  transition:transform 0.3s ease;
+  transform: scale(1.10); /* Adjust the scale factor for the hover effect */
+}
+#productContainer .bg-white {
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add a smooth transition effect for both filter and transform */
+}
+
+.red{
+  color: red;
+}
+
+.glass-card {
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: 20px;
+  max-width: 300px;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.parallax {
+  min-height: 60vh !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax video {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.carousel-item {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+.border-red-500
+{
+  border-color: red !important;
+}

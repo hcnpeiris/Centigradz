@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.3/dist/heroicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Centigradz</title>
+<style>
+.slideshow-container {
+  margin: auto;
+  overflow: hidden; /* Added overflow property */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 0;
+  padding: 0px 0px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 0;
+  width: 0;
+  margin: 0 0px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+
+<body class="bg-black">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0"
+        nonce="pJ7Mpb3y"></script>
+    <nav class="px-4 mt-14 pt-3" style="background-color: #FF0000;">
+        <div class="container mx-auto flex justify-center items-center">
+            <!-- Social links (replace the href attributes with your social links) -->
+            <div class="space-x-4 text-2xl">
+                <a href="https://www.facebook.com/centigradzlive" class="text-white hover:text-gray-200"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/centigradz1" class="text-white hover:text-gray-200"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://music.apple.com/us/artist/centigradz/261299810"
+                    class="text-white hover:text-gray-200"><i class="fab fa-apple"></i></a>
+                <a href="https://open.spotify.com/artist/28zBYEZiaeaXnTOhAHy1QQ"
+                    class="text-white hover:text-gray-200"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/@CENTIGRADZlive" class="text-white hover:text-gray-200"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@centigradz1" class="text-white hover:text-gray-200"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <nav class="bg-black fixed top-0 z-50 w-full py-2 border-b-2 border-red-500" style="font-family:'Anton', sans-serif; width: 100vw;">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-black p-1">
+                <a href="#">
+                    <img src="img/Centi Logo.png" alt="Company Logo" class="logo">
+                </a>
+
+            </div>
+            <div class="hidden md:flex flex-grow items-center justify-end">
+                <a href="index.html" class="text-white text-xl font-thin mx-3 hover:text-gray-500"
+                    style="color: #FF0000;">Home</a>
+                <a href="services.html" class="text-white text-xl  mx-3 hover:text-gray-500">Services</a>
+                <a href="music.html" class="text-white text-xl  mx-3 hover:text-gray-500">Music</a>
+                <a href="about.html" class="text-white text-xl font-light mx-3 hover:text-gray-500">About</a>
+            </div>
+
+
+            <div class="hidden md:flex flex-grow items-center justify-end">
+                <a href="https://form.jotform.com/232563666599473">
+                    <button class="first_button cssbuttons-io-button" style="animation-delay: 1s;">
+                        Reservation
+                        <div class="icon">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </a>
+            </div>
+
+            <div class="md:hidden px-3">
+                <button id="nav-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div class="md:hidden" id="mobile-nav" style="display: none;">
+            <div class="bg-black p-4">
+                <a href="index.html" class="block text-white py-2" style="color: #FF0000;">Home</a>
+                <a href="services.html" class="block text-white py-2">Services</a>
+                <a href="music.html" class="block text-white py-2">Music</a>
+                <a href="about.html" class="block text-white py-2">About</a>
+            </div>
+        </div>
+    </nav>
+    <div class="splash-screen">
+        <img src="img/Centi Logocrp-01.png" alt="Logo" class="logo">
+    </div>
+    <section id="home" class="border-b border-red-500 mt-3 items-center justify-center" style="min-height: 78vh;" >
+
+        <div class="container mx-auto items-center justify-center">
+
+            <div class="flex flex-col md:flex-row">
+
+                <div class="slideshow-container w-full md:w-1/2  p-4 " style=" height: max-content; margin-top: 10px;">
+
+                    <div class="mySlides fade">
+                      <img src="img/1.png" >
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="img/2.png" >
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="img/3.png" >
+                    </div>
+                    
+                    </div>
+                    <div style="text-align:center">
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                    </div>
+                <div class="md:w-1/2 text-black flex flex-col justify-center md:items-center">
+                    
+                    <a href="#">
+                        <img src="img/Centi Logo.png" alt="Company Logo" class=" md:flex">
+                    </a>
+                    <p class="text-center p-2 text-gray-300" data-lang="en">Discover the essence of Sri Lankan music with
+                        Centigradz. We blend pop, rock, and tradition to create unforgettable melodies. Explore our
+                        music and embark on a journey of sound and soul.</p>
+                    </p>
+
+                    <div class="flex justify-center m-4 mt-8">
+
+                        <a href="https://form.jotform.com/232563666599473">
+                            <button class="first_button cssbuttons-io-button">
+                                Reservation
+                                <div class="icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </a>
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="parallax ">
+        <video autoplay muted loop >
+          <source src="img/Comp 1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <p class="text-white p-10 text-center text-xl" style=" padding: 25vw 0;">
+            Experience the vibrant rhythms and melodies of Sri Lanka brought to life through live performances
+        </p>
+        <!-- <div class="">
+            <div class=" flex flex-col items-center justify-center">
+                <p class="text-white p-10 text-center" style="font-size: 1vw;">
+                  Experience the vibrant rhythms and melodies of Sri Lanka brought to life through live performances
+                </p>
+              </div>
+        </div> -->
+      </section>
+    <section class="border-t border-red-500 p-8">
+        <h2 class="text-white text-2xl p-4 ">About us</h2>
+        <div class="container mx-auto p-6">
+
+            <!-- Two Column Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+                <!-- Column 1 -->
+                <div class="space-y-4 rounded-lg shadow-md">
+                    <p class="text-left p-2 text-gray-300"><span class="red pr-2 text-2xl">Centigradz</span> Sri Lanka's legendary band, has been making music for over 25 years. It all began with a group of college students who simply loved music, creating engaging songs that have resonated across the country.</p>
+                    <a href="about.html" class="red p-2 hover:underline">Read More</a>
+                    
+                </div>
+    
+                <!-- Column 2 -->
+                <div class="  rounded-lg shadow-md">
+                    <img src="img/group 1.jpg">
+                </div>
+    
+            </div>
+    
+        </div>
+    </section>
+    <section class="border-t border-red-500 p-8">
+        <h2 class="text-white text-2xl p-4 ">Our Team</h2>
+        <div class="container mx-auto" style="padding: 5vh 5vw;">   
+            <p class="text-left p-2 text-gray-300">Meet the talented members who bring our music to life, each contributing their unique flair and passion to our electrifying performances.From soaring vocals to soulful rhythms, our band members come together to create an unforgettable musical experience that resonates with audiences worldwide</p>
+
+            <div class=" py-16">
+                <div class="container mx-auto px-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="flex flex-col items-center">
+                      <img src="img/amila.jpg" alt="Team Member 1" class="rounded-lg w-42 h-42 object-cover mb-4">
+                      <h3 class="text-lg  red">Amila Niroshan</h3>
+                      <p class="text-gray-600">Rapper</p>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="flex flex-col items-center">
+                      <img src="img/thusith.jpeg" alt="Team Member 2" class="rounded-lg w-42 h-42 object-cover mb-4">
+                      <h3 class="text-lg  red">Thusith Niroshana</h3>
+                      <p class="text-gray-600">Music Producer</p>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="flex flex-col items-center">
+                      <img src="img/Ishan.jpg" alt="Team Member 3" class="rounded-lg w-42 h-42 object-cover mb-4">
+                      <h3 class="text-lg  red">Ishan Lantra</h3>
+                      <p class="text-gray-600">Singer</p>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="flex flex-col items-center">
+                      <img src="img/Eranga.jpg" alt="Team Member 4" class="rounded-lg w-42 h-42 object-cover mb-4">
+                      <h3 class="text-lg  red">Eranga UG</h3>
+                      <p class="text-gray-600">Singer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t border-red-500 p-8">
+        <h2 class="text-white text-2xl p-4 ">Updates</h2>
+        <div class="container mx-auto p-6">
+
+            <!-- Two Column Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+                <!-- Column 1 -->
+                <div class="space-y-4 px-4 rounded-lg shadow-md">
+                    <p class="text-xl text-gray-200 ">YouTube</p>
+                    <iframe width="100%" height="300"
+                        src="https://www.youtube.com/embed/1Cbohsb8cp0?si=qIMI-Vzrit6wpcty" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+    
+                <!-- Column 2 -->
+                <div class="  rounded-lg shadow-md">
+                    <p class="text-xl text-gray-200 ">Facebook</p>
+                    <div class="fb-page" data-href="https://www.facebook.com/centigradzlive" data-tabs="timeline"
+                        data-width="" data-height="400" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/centigradzlive" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/centigradzlive">Centigradz</a></blockquote>
+                    </div>  
+                </div>
+    
+            </div>
+    
+        </div>
+    </section>
+
+    <footer class="border-t border-red-500 bg-black text-white py-8">
+        <div class="container mx-auto flex flex-col items-center">
+
+            <div class="space-x-4 text-2xl m-2">
+                <a href="https://www.facebook.com/centigradzlive" class="text-white hover:text-gray-200"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/centigradz1" class="text-white hover:text-gray-200"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://music.apple.com/us/artist/centigradz/261299810"
+                    class="text-white hover:text-gray-200"><i class="fab fa-apple"></i></a>
+                <a href="https://open.spotify.com/artist/28zBYEZiaeaXnTOhAHy1QQ"
+                    class="text-white hover:text-gray-200"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/@CENTIGRADZlive" class="text-white hover:text-gray-200"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@centigradz1" class="text-white hover:text-gray-200"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="text-sm text-gray-500">&copy; 2023 Centigradz. All rights reserved.</div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#nav-toggle").click(function () {
+            $("#mobile-nav").slideToggle();
+        });
+    });
+</script>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+    
+
+<script>
+    const slideItems = document.querySelectorAll('.slide-in-item');
+    const triggerPoint = document.querySelector('.trigger-point');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-in');
+            }
+        });
+    }, options);
+
+    slideItems.forEach((item) => {
+        observer.observe(item);
+    });
+
+    // Trigger the initial check to see if any items are in view on page load
+    slideItems.forEach((item) => {
+        if (item.getBoundingClientRect().top < window.innerHeight) {
+            item.classList.add('slide-in');
+        }
+    });
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("button-3");
+        const englishElements = document.querySelectorAll("[data-lang='en']");
+        const tamilElements = document.querySelectorAll("[data-lang='ta']");
+
+        // Initially, hide Tamil content
+        tamilElements.forEach((element) => element.classList.add("hiddenl"));
+
+        toggleButton.addEventListener("click", function () {
+            englishElements.forEach((element) => element.classList.toggle("hiddenl"));
+            tamilElements.forEach((element) => element.classList.toggle("hiddenl"));
+        });
+    });
+</script>
+
+  <script src="test.js"></script>
+  </body>
+</html>
