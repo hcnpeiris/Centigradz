@@ -46,14 +46,14 @@ h1,h2,h3,a {
 .cssbuttons-io-button {
   color: rgb(255, 255, 255);
   font-family: 'Roboto', sans-serif !important;
-  background-color: #FF0000;
+  background-color:red;
   font-family: inherit;
   padding: 0.35em;
   padding-left: 1.2em;
   font-size: 17px;
   font-weight: 500;
   border-radius: 15em;
-  border: 2px solid #FF0000;
+  border: 2px solid red;
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
@@ -244,27 +244,6 @@ h1,h2,h3,a {
   margin: 20px 0; /* Adjust the margin to control the space between sections */
 }
 
-
-.splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  opacity: 1; /* Initially visible */
-  z-index: 9999; /* Ensure it's on top of other content */
-  animation: fadeIn 0s forwards, slideUp1 1s forwards 2s; /* Fade in and then fade out */
-}
-.logo {
-  max-width: 100%;
-  height: auto;
-  animation: fadeIn 1s;
-}
-
 .content {
   /* Adjust styles for your content */
   padding: 20px;
@@ -292,7 +271,7 @@ h1,h2,h3,a {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-120%);
   }
 }
 #home {
