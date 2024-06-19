@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="centigradz, Centigradz, CENTIGRADZ, music, Sri Lanka, Colombo">
+    <meta name="description" content="Discover Centigradz, the renowned Sri Lankan band known for their unique blend of contemporary and traditional music. Explore their hit songs, albums, and live performances.">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.3/dist/heroicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,7 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-
     <title>Centigradz</title>
 <style>
     .splash-screen {
@@ -29,9 +30,9 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(0, 0, 0);
-    opacity: 1; /* Initially visible */
-    z-index: 9999; /* Ensure it's on top of other content */
-    animation: fadeIn 1s forwards , slideUp1 1s forwards 2s; /* Fade in and then fade out */
+    opacity: 1; 
+    z-index: 9999; 
+    animation: fadeIn 1s forwards , slideUp1 1s forwards 2s; 
     }
     .logo {
     max-width: 100%;
@@ -51,27 +52,22 @@
 
     .slideshow-container {
     margin: auto;
-    overflow: hidden; /* Added overflow property */
+    overflow: hidden; 
     }
-    /* CSS to hide content on screens smaller than 400px */
     @media (max-width: 399px) {
         .hidesm {
             display: none;
         }
     }
-    /* CSS to display content only on screens 400px and wider */
     @media (min-width: 400px) {
         .showlg {
             display: block;
         }
     }
-
-    /* Optional: Hide by default for other screen sizes */
     .showlg {
         display: none;
     }
 
-    /* Caption text */
     .text {
     color: #f2f2f2;
     font-size: 0;
@@ -80,7 +76,6 @@
     text-align: center;
     }
 
-    /* Number text (1/3 etc) */
     .numbertext {
     color: #f2f2f2;
     font-size: 0;
@@ -89,7 +84,6 @@
     top: 0;
     }
 
-    /* The dots/bullets/indicators */
     .dot {
     height: 0;
     width: 0;
@@ -113,8 +107,6 @@
     from {opacity: .4} 
     to {opacity: 1}
     }
-
-    /* On smaller screens, decrease text size */
     @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
     }
@@ -312,72 +304,47 @@
         <video autoplay muted loop >
           <source src="img/Comp 1.mp4" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
-        
+        </video> 
         <p class="text-white p-10 text-center text-xl" style=" padding: 25vw 0;">
             Experience the vibrant rhythms and melodies of Sri Lanka brought to life through live performances
         </p>
-        <!-- <div class="">
-            <div class=" flex flex-col items-center justify-center">
-                <p class="text-white p-10 text-center" style="font-size: 1vw;">
-                  Experience the vibrant rhythms and melodies of Sri Lanka brought to life through live performances
-                </p>
-              </div>
-        </div> -->
       </section>
     <section class="border-t border-red-500 p-8">
         <h2 class="text-white text-2xl p-4 ">About us</h2>
         <div class="container mx-auto p-6">
-
-            <!-- Two Column Section -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-                <!-- Column 1 -->
                 <div class="space-y-4 rounded-lg shadow-md">
                     <p class="text-left p-2 text-gray-300"><span class="red pr-2 text-2xl">Centigradz</span> Sri Lanka's legendary band, has been making music for over 25 years. It all began with a group of college students who simply loved music, creating engaging songs that have resonated across the country.</p>
                     <a href="about.html" class="red p-2 hover:underline">Read More</a>
-                    
                 </div>
-    
-                <!-- Column 2 -->
-                <div class="  rounded-lg shadow-md">
+                    <div class="  rounded-lg shadow-md">
                     <img src="img/group 1.jpg">
                 </div>
-    
             </div>
-    
         </div>
     </section>
     <section class="border-t border-red-500 p-8">
         <h2 class="text-white text-2xl p-4 ">Our Team</h2>
         <div class="container mx-auto" style="padding: 5vh 5vw;">   
             <p class="text-left p-2 text-gray-300">Meet the talented members who bring our music to life, each contributing their unique flair and passion to our electrifying performances.From soaring vocals to soulful rhythms, our band members come together to create an unforgettable musical experience that resonates with audiences worldwide</p>
-
             <div class=" py-16">
                 <div class="container mx-auto px-4">
                   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Team Member 1 -->
                     <div class="flex flex-col items-center">
                       <img src="img/amila.heic" alt="Team Member 1" class="rounded-lg w-42 h-42 object-cover mb-4">
                       <h3 class="text-lg  red">Amila Niroshan</h3>
                       <p class="text-gray-600">Rapper</p>
                     </div>
-                    
-                    <!-- Team Member 2 -->
                     <div class="flex flex-col items-center">
                       <img src="img/thusith.jpeg" alt="Team Member 2" class="rounded-lg w-42 h-42 object-cover mb-4">
                       <h3 class="text-lg  red">Thusith Niroshana</h3>
                       <p class="text-gray-600">Music Producer</p>
                     </div>
-                    
-                    <!-- Team Member 3 -->
                     <div class="flex flex-col items-center">
                       <img src="img/Ishan.jpg" alt="Team Member 3" class="rounded-lg w-42 h-42 object-cover mb-4">
                       <h3 class="text-lg  red">Ishan Lantra</h3>
                       <p class="text-gray-600">Singer</p>
                     </div>
-                    
-                    <!-- Team Member 4 -->
                     <div class="flex flex-col items-center">
                       <img src="img/Eranga.jpg" alt="Team Member 4" class="rounded-lg w-42 h-42 object-cover mb-4">
                       <h3 class="text-lg  red">Eranga UG</h3>
@@ -390,15 +357,10 @@
             </div>
         </div>
     </section>
-
     <section class="border-t border-red-500 p-8">
         <h2 class="text-white text-2xl p-4 ">Updates</h2>
         <div class="container mx-auto p-6">
-
-            <!-- Two Column Section -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-                <!-- Column 1 -->
                 <div class="space-y-4 px-4 rounded-lg shadow-md">
                     <p class="text-xl text-gray-200 ">YouTube</p>
                     <iframe width="100%" height="300"
@@ -407,8 +369,6 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-    
-                <!-- Column 2 -->
                 <div class="  rounded-lg shadow-md">
                     <p class="text-xl text-gray-200 ">Facebook</p>
                     <div class="fb-page" data-href="https://www.facebook.com/centigradzlive" data-tabs="timeline"
@@ -418,15 +378,11 @@
                                 href="https://www.facebook.com/centigradzlive">Centigradz</a></blockquote>
                     </div>  
                 </div>
-    
             </div>
-    
         </div>
     </section>
-
     <footer class="border-t border-red-500 bg-black text-white py-8">
         <div class="container mx-auto flex flex-col items-center">
-
             <div class="space-x-4 text-2xl m-2">
                 <a href="https://www.facebook.com/centigradzlive" class="text-white hover:text-gray-200"><i
                         class="fab fa-facebook"></i></a>
@@ -442,10 +398,8 @@
                         class="fab fa-tiktok"></i></a>
             </div>
             <div class="text-sm text-gray-500">&copy; 2023 Centigradz. All rights reserved.</div>
-
         </div>
     </footer>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
@@ -472,7 +426,7 @@
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 2000); 
     }
 </script>
 <script>
@@ -497,7 +451,6 @@
         observer.observe(item);
     });
 
-    // Trigger the initial check to see if any items are in view on page load
     slideItems.forEach((item) => {
         if (item.getBoundingClientRect().top < window.innerHeight) {
             item.classList.add('slide-in');
